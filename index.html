@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <title>Agroone</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        /* background-image: url(./agriculture-g6374f083e_1920.jpg);
+        background-repeat: no-repeat; 
+        background-color: darkgray;*/
+      }
+      .navbar {
+        background-color: black;
+        color: white;
+        display: flex;
+        width: 100%;
+      }
+      .navbar:hover {
+        color: yellow;
+      }
+      ul li {
+        margin: 3px;
+        padding: 5px;
+        display: inline-flex;
+        font-size: large;
+      }
+      ul li a {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+      }
+      ul li a:hover {
+        color: yellow;
+      }
+      ul li input {
+        width: 220px;
+        margin: 2px;
+        padding: 3px;
+        border: 2px solid lightyellow;
+        background-color: lightyellow;
+        border-radius: 2px;
+      }
+      #btn-first {
+        background-color: yellow;
+        border-radius: 3px;
+        margin: 2px;
+        padding: 5px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      #btn-first:hover {
+        border: 2px solid rgb(233, 223, 223);
+        background-color: rgb(rgb(255, 255, 93));
+        cursor: pointer;
+      }
+
+      #farming-campany {
+        margin-left: 40px;
+        margin-top: 8px;
+        font-size: 30px;
+        font-weight: lighter;
+        padding-right: 200px;
+      }
+      #btn-login {
+        border-radius: 3px;
+        margin: 2px;
+        padding: 7px;
+        font-size: 14px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background-image: linear-gradient(
+          to right,
+          rgb(139, 139, 80),
+          yellow,
+          rgb(139, 139, 80)
+        );
+      }
+      #btn-login:hover {
+        background-image: linear-gradient(
+          to left,
+          rgb(209, 209, 70),
+          yellow,
+          rgb(209, 209, 70)
+        );
+        cursor: pointer;
+        border: 1px solid white;
+      }
+      .background {
+        background-image: url(./agriculture-g6374f083e_1920.jpg);
+        height: 360px;
+      }
+      #h1 {
+        margin-top: 15px;
+        margin-left: 30%;
+        color: darkgreen;
+      }
+      #h1:hover {
+        color: white;
+      }
+
+      #h2 {
+        color: white;
+        margin-top: 25px;
+        margin-left: 30%;
+      }
+
+      #h2:hover {
+        color: black;
+      }
+
+      .container p {
+        font-size: larger;
+        margin-left: 30%;
+      }
+
+      #btn-third {
+        color: white;
+        font-family: cursive;
+        border: 2px solid white;
+        border-radius: 6px;
+        margin: 3px;
+        padding: 3px;
+        margin-left: 50%;
+        background: none;
+        border: 2px solid yellow;
+      }
+      #btn-third:hover {
+        cursor: pointer;
+        color: yellow;
+        border: 2px solid white;
+      }
+      .container-card {
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        padding: 0;
+        color: white;
+        padding-top: 50px;
+      }
+      /* card destination started */
+      .card-destination {
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        background-color: black;
+        padding-top: 230px;
+        margin: auto;
+        border: 3px solid white;
+        height: 670px;
+        width: 100%;
+      }
+      .card-destination:hover {
+        color: yellow;
+      }
+      .card-destination h4 {
+        font-size: xx-large;
+        padding-top: 50px;
+        padding: 30px;
+      }
+      #destination {
+        background-image: url(./3377932.png);
+        background-repeat: no-repeat;
+        width: 550px;
+        height: 340px;
+      }
+
+      .single-card {
+        border: none;
+        width: 600px;
+        height: 420px;
+        background-image: repeating-linear-gradient(
+          yellow,
+          rgb(204, 204, 49),
+          yellow
+        );
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 10px;
+      }
+      .single-card p {
+        font-size: large;
+        padding-top: 10px;
+        width: 100%;
+        color: black;
+        padding-right: 50px;
+      }
+
+      /* chooose card started */
+      #destination-choose-first {
+        justify-content: space-around;
+        color: white;
+        background-color: black;
+        padding-top: 40px;
+        margin: auto;
+        border: 3px solid white;
+        height: 550px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      #destination-choose {
+        padding-top: 10px;
+      }
+      #destination-choose button {
+        padding: 5px;
+        background-color: yellow;
+        color: black;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        border: 1px solid orange;
+        margin-left: 50px;
+      }
+      #destination-choose button:hover {
+        cursor: pointer;
+        background-image: repeating-linear-gradient(
+          yellow,
+          rgb(138, 138, 22),
+          yellow
+        );
+      }
+      .four-container {
+        padding-top: 50px;
+        font-size: smaller;
+      }
+     
+      #para {
+        display: flex;
+      }
+      #para h1 {
+        padding: 10px;
+      }
+      #para h1:hover{
+        color: yellow;
+      }
+      #para p {
+        font-size: 20px;
+        padding: 20px;
+        margin: 5px;
+      }
+    
+      #para p:hover{
+        color: yellow;
+      }
+      #para img{
+        width: 210px;
+        height: 180px;
+      }
+
+      .four-container {
+        font-size: 20px;
+        margin: auto;
+        padding: 10px;
+
+      }
+     
+      #s1-content {
+        display: flex;
+        padding: 10px;
+      }
+      #s1-content p {
+        font-size: 20px;
+        padding: 20px;
+      }
+     
+      #s1-content p:hover{
+      color: yellow;
+      }
+
+      #s1-content p img {
+        border-radius: 50%;
+        border: 2px solid white;
+        background: darkblue;
+      }
+      #s1-content p img:hover{
+        border: 2px solid yellow;
+      }
+      .single-card-img {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img
+          src="./pop-art-background-with-dots-yellow-comic-background-cartoon-funny-retro-pattern-vector-illustration_230281-84.jpg"
+          alt=""
+          width="150px"
+          height="50px"
+        />
+        <ul>
+          <li>
+            <a href="#"><i class="bi bi-house-check"></i>Home</a>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <input type="text" id="text" name="text" placeholder="Search" />
+          </li>
+          <li><button id="btn-first">GET A QUATE</button></li>
+        </ul>
+        <div id="farming-campany">
+          <p>FARMING COMPANY</p>
+        </div>
+        <button id="btn-login">Login</button>
+      </nav>
+    </header>
+    <div class="background">
+      <h1 id="h1">WEL COME TO AGRICULTURE FARM</h1>
+      <div class="container">
+        <h1 id="h2">FIRST IMPRESSTION MATTER</h1>
+        <p>
+          "Agriculture is our wisest pursuit, because it will in the end
+          contribute most to real wealth, good morals & happiness."
+        </p>
+        <button id="btn-third">Discover more ⇝</button>
+      </div>
+      <div class="container-card">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="./cards/barley-field-g426d09623_1920.jpg"
+            alt="Card image cap"
+            width="300px"
+            height="200px"
+          />
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="cards/boys-g9306821c4_1920.jpg"
+            alt="Card image cap"
+            width="300px"
+            height="200px"
+          />
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="./cards/salt-harvesting-g2138d46ff_1920.jpg"
+            alt="Card image cap"
+            width="300px"
+            height="200px"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="card-destination">
+      <div id="destination">
+        <h4>World's Hottest</h4>
+        <h4>Destination</h4>
+        <h4>for Vegans</h4>
+        <div>
+          <img src="./3380691.png" alt="" width="100px" height="100px" />
+        </div>
+      </div>
+      <div class="single-card">
+        <p>
+          Thailand is known for its tropical paradise. From its stunning beaches
+          to its vibrant nightlife, Thailand has something for everyone.
+        </p>
+        <p>
+          Chiang Mai is a city in the north of Thailand and is often called the
+          Vegan capital of Asia.
+        </p>
+        <p>
+          Thai food is known for its vegetable-rich flavors. Many dishes are
+          made with coconut milk, making it easy to eat completely vegan, even
+          if you travel with lacto-vegetarians.
+        </p>
+        <p>
+          The city is full of vegan-friendly restaurants, with plenty of options
+          for those who want to try Thai food. There are also cooking classes
+          available that teach you how to cook traditional Thai dishes using
+          plant-based ingredients.
+        </p>
+      </div>
+    </div>
+    <div id="destination-choose-first">
+      <div id="destination-choose">
+        <div id="para">
+          <h1>Why Choose Us?</h1>
+          <img
+            src="./3377932.png"
+            alt=""
+            width="200px"
+            height="200px"
+          />
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <p>Possimus delectus sint, non quaerat soluta fuga officiis</p>
+          <p>asperiores nisi repudiandae consectetur! Reiciendis, mollitia!</p>
+        </div>
+        <div class="four-container">
+          <div id="s1-content">
+            <p>
+              <img src="./3377932.png" alt="" width="30px" height="30px" />
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
+              >
+              <span> Consequatur, delectus.</span>
+            </p>
+            <p>
+              <img src="./3377932.png" alt="" width="30px" height="30px" />
+              <span>Lorem ipsum dolor sit amet </span>
+              <span> consectetur adipisicing elit.</span>
+              <span>Nam, aliquid!</span>
+            </p>
+          </div>
+          <div id="s1-content">
+            <p>
+              <img src="./3377932.png" alt="" width="30px" height="30px" />
+              <span>Lorem ipsum dolor</span>
+              <span> sit amet consectetur</span>
+              <span> adipisicing elit.</span>
+              <span>Nam, aliquid!</span>
+            </p>
+            <p>
+              <img src="./3377932.png" alt="" width="30px" height="30px" />
+              <span>Lorem ipsum dolor sit</span>
+              <span> amet consectetur </span>
+              <span> adipisicing elit.</span>
+              <span> Nam, aliquid!</span>
+            </p>
+          </div>
+        </div>
+        <button>Read more ⇝</button>
+      </div>
+    </div>
+  </body>
+</html>
